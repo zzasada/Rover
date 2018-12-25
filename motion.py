@@ -18,7 +18,7 @@ class motion(object):
 
     def __init__(self):
         self.offset = 0
-        self.servo = Servo(0)
+        self.servo = Servo.Servo(0)
         self.servo.setup()
 
     def forward(self, speed):
