@@ -18,6 +18,9 @@ class motion(object):
 
     def __init__(self):
         self.offset = 0
+        self.position = 90
+        self.max_right = 135
+        self.max_left = 45
         self.servo = Servo.Servo(0)
         self.servo.setup()
 
@@ -43,18 +46,19 @@ class motion(object):
 
     def center(self):
         print("Center")
-        for i in range(90, 150, 5):
-            print(i)
-            self.servo.write(i)
-            time.sleep(0.1)
-        for i in range(150, 30, -5):
-            print(i)
-            self.servo.write(i)
-            time.sleep(0.1)
-        for i in range(30, 90, 5):
-             print(i)
-             self.servo.write(i)
-             time.sleep(0.1)
+        self.servo.write(self.position + self.offset)
+        # for i in range(90, 150, 5):
+        #     print(i)
+        #     self.servo.write(i)
+        #     time.sleep(0.1)
+        # for i in range(150, 30, -5):
+        #     print(i)
+        #     self.servo.write(i)
+        #     time.sleep(0.1)
+        # for i in range(30, 90, 5):
+        #      print(i)
+        #      self.servo.write(i)
+        #      time.sleep(0.1)
 
 if __name__ == '__main__':
     move = motion()
