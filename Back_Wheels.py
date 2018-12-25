@@ -29,8 +29,8 @@ class Back_Wheels(object):
 
     def __init__(self, debug=False, bus_number=1, db="config"):
         ''' Init the direction channel and pwm channel '''
-        self.forward_A = True
-        self.forward_B = True
+        self.forward_A = False
+        self.forward_B = False
 
         # self.db = filedb.fileDB(db=db)
 
