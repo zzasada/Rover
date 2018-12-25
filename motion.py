@@ -43,4 +43,4 @@ class motion(object):
 
 if __name__ == '__main__':
     move = motion()
-    move.forward()
+    move.forward(0)
