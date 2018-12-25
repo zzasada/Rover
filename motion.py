@@ -43,7 +43,7 @@ class motion(object):
 
     def center(self):
         print("Center")
-        self.servo.write(-45)
+        self.servo.write(-90)
 
 if __name__ == '__main__':
     move = motion()
