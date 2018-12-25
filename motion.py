@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+import Servo
 
 class motion(object):
     """
@@ -17,6 +18,8 @@ class motion(object):
 
     def __init__(self):
         self.offset = 0
+        self.servo = Servo(0)
+        self.servo.setup()
 
     def forward(self, speed):
         """Move Rover forward.
@@ -40,7 +43,8 @@ class motion(object):
 
     def center(self):
         print("Center")
+        self.servo.write(-45)
 
 if __name__ == '__main__':
     move = motion()
-    move.forward(0)
+    move.center()
