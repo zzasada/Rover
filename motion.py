@@ -43,7 +43,7 @@ class motion(object):
 
     def center(self):
         print("Center")
-        for i in range(0, 90, 5):
+        for i in range(180, 90, -5):
             print(i)
             self.servo.write(i)
             time.sleep(0.1)
