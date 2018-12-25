@@ -103,9 +103,9 @@ class Servo(object):
             print(self._DEBUG_INFO, "Set debug off")
 
 def test():
-    '''Servo driver test on channel 1'''
+    '''Servo driver test on channel 0'''
     import time
-    a = Servo(1)
+    a = Servo(0)
     a.setup()
     for i in range(0, 180, 5):
         print(i)
