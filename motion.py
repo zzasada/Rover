@@ -17,7 +17,7 @@ class motion(object):
     """
 
     def __init__(self):
-        self.offset = 0
+        self.offset = 10
         self.position = 90
         self.max_right = 135
         self.max_left = 45
