@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-import Servo
+import Servo, time
 
 class motion(object):
     """
@@ -43,7 +43,17 @@ class motion(object):
 
     def center(self):
         print("Center")
-        self.servo.write(-90)
+        for i in range(45, 165, 5):
+            print(i)
+            self.servo.write(i)
+            time.sleep(0.1)
+        for i in range(165, 45, -5):
+            print(i)
+            self.servo.write(i)
+            time.sleep(0.1)
+        for i in range(0, 90, 2):
+            self.servo.write(i)
+            time.sleep(0.05)
 
 if __name__ == '__main__':
     move = motion()
