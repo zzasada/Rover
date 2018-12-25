@@ -43,18 +43,18 @@ class motion(object):
 
     def center(self):
         print("Center")
-        for i in range(180, 0, -5):
+        for i in range(90, 170, 5):
             print(i)
             self.servo.write(i)
             time.sleep(0.1)
-        # for i in range(165, 45, -5):
-        #     print(i)
-        #     self.servo.write(i)
-        #     time.sleep(0.1)
-        # for i in range(0, 90, 2):
-        #     self.servo.write(i)
-        #     time.sleep(0.05)
-        self.servo.write(90)
+        for i in range(170, 10, -5):
+            print(i)
+            self.servo.write(i)
+            time.sleep(0.1)
+        for i in range(10, 90, 5):
+             print(i)
+             self.servo.write(i)
+             time.sleep(0.1)
 
 if __name__ == '__main__':
     move = motion()
